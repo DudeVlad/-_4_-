@@ -1,0 +1,53 @@
+@startuml
+' hide the spot
+hide circle
+
+
+entity "Worker" as e01 {
+   id : text "PK"
+  *name : text
+  *avatarUrl : text
+  *name : text
+  *lastName : text
+  *userTag : text
+  *departament : text
+  *position : text
+  *birthday : text
+  *phone : text
+   workeid : text "FK"
+}
+
+entity "Workers" as e02 {
+
+
+  workeid : text "PK"
+ 
+}
+
+
+e02 ||..o{ e01
+
+@enduml
+
+
+
+
+@startuml
+Worker }-- Workers
+Class Workers{
+Workers : workers
+}
+Class Worker{
+id
+name
+lastName
+usertag
+departament
+position
+bithday
+phone
+{method}Worker(method)
+
+
+}
+@enduml
